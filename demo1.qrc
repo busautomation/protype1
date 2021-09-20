@@ -1,0 +1,29 @@
+<RCC>
+  <qresource prefix="logo">
+    <file>logos/backward__music_player.png</file>
+    <file>logos/fm_tab.svg</file>
+    <file>logos/forward_music_player.png</file>
+    <file>logos/play_music_player.png</file>
+    <file>logos/phone_final.png</file>
+    <file>logos/phone11.jpeg</file>
+    <file>logos/phone_final.png</file>
+    <file>logos/phone_final.png</file>
+    <file>logos/phone_final.png</file>
+    <file>logos/music_final.jpeg</file>
+    <file>logos/music_4.svg</file>
+    <file>logos/music_3.svg</file>
+    <file>logos/music_2_player.svg</file>
+    <file>logos/status_2_player.svg</file>
+    <file>logos/ambulance_tab.svg</file>
+    <file>logos/bt_tab.svg</file>
+    <file>logos/calling_player.svg</file>
+    <file>logos/camara_player.svg</file>
+    <file>logos/fm_tab.svg</file>
+    <file>logos/music_player.svg</file>
+    <file>logos/open_camara_tab.svg</file>
+    <file>logos/police-badge_tab.svg</file>
+    <file>logos/settings_player.svg</file>
+    <file>logos/status_player.png</file>
+    <file>logos/usb_tab.svg</file>
+  </qresource>
+</RCC>

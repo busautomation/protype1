@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:black;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="main_tab">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabBar::tab { height: 86px; width: 80px; }QTabWidget::pane { /* The tab widget frame */
+border-top: 2px solid #C2C7CB;
+}
+QTabWidget::tab-bar {
+left: 5px; /* move to the right by 5px */
+}
+/* Style the tab using the tab sub-control. Note that it reads QTabBar _not_ QTabWidget */
+QTabBar::tab {
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #E1E1E1, stop: 0.4 #DDDDDD, stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+border: 2px solid #C4C4C3;
+border-bottom-color: #C2C7CB; /* same as the pane color */
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+min-width: 8ex;
+padding: 2px;
+}
+QTabBar::tab:selected, QTabBar::tab:hover {
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #fafafa, stop: 0.4 #f4f4f4, stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+}
+QTabBar::tab:selected {
+border-color: #9B9B9B;
+border-bottom-color: #C2C7CB; /* same as pane color */
+}
+QTabBar::tab:!selected {
+margin-top: 2px; /* make non-selected tabs look smaller */
+}
+QTabBar::tab:selected { font: bold; color: skyblue; }</string>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::East</enum>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>100</width>
+      <height>60</height>
+     </size>
+    </property>
+    <widget class="QWidget" name="music_tab">
+     <property name="font">
+      <font>
+       <stylestrategy>PreferDefault</stylestrategy>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <attribute name="icon">
+      <iconset resource="demo1.qrc">
+       <normaloff>:/logo/logos/music_final.jpeg</normaloff>:/logo/logos/music_final.jpeg</iconset>
+     </attribute>
+     <attribute name="title">
+      <string/>
+     </attribute>
+     <widget class="QTabWidget" name="music_box_window">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>791</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>50</height>
+       </size>
+      </property>
+      <widget class="QWidget" name="fm">
+       <attribute name="icon">
+        <iconset resource="demo1.qrc">
+         <normaloff>:/logo/logos/fm_tab.svg</normaloff>:/logo/logos/fm_tab.svg</iconset>
+       </attribute>
+       <attribute name="title">
+        <string/>
+       </attribute>
+       <widget class="QLabel" name="fm_label">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>70</y>
+          <width>101</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>40</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <strikeout>false</strikeout>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:none;color:white;border:none;</string>
+        </property>
+        <property name="text">
+         <string>FM</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="fm_channel_label">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>70</y>
+          <width>171</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>40</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <strikeout>false</strikeout>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:none;color:white;border:none;</string>
+        </property>
+        <property name="text">
+         <string>99.9</string>
+        </property>
+       </widget>
+       <widget class="QSlider" name="horizontalSlider_fm_channels">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>170</y>
+          <width>431</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <strikeout>false</strikeout>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="tabletTracking">
+         <bool>false</bool>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:none;</string>
+        </property>
+        <property name="tracking">
+         <bool>false</bool>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="invertedAppearance">
+         <bool>false</bool>
+        </property>
+        <property name="invertedControls">
+         <bool>false</bool>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksAbove</enum>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="next_btn_fm">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>210</y>
+          <width>171</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="demo1.qrc">
+          <normaloff>:/logo/logos/forward_music_player.png</normaloff>:/logo/logos/forward_music_player.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>100</width>
+          <height>120</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="previous_btn_fm">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>210</y>
+          <width>181</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="demo1.qrc">
+          <normaloff>:/logo/logos/backward__music_player.png</normaloff>:/logo/logos/backward__music_player.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>100</width>
+          <height>120</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="AUX_USB">
+       <attribute name="icon">
+        <iconset resource="demo1.qrc">
+         <normaloff>:/logo/logos/usb_tab.svg</normaloff>:/logo/logos/usb_tab.svg</iconset>
+       </attribute>
+       <attribute name="title">
+        <string/>
+       </attribute>
+       <widget class="QLabel" name="fm_aux_player_song_title_label">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>60</y>
+          <width>361</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>24</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <strikeout>false</strikeout>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:none;color:white;border:none;</string>
+        </property>
+        <property name="text">
+         <string>TITLE LOADING...</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="fm_aux_player_song_artist_">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>110</y>
+          <width>321</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+          <strikeout>false</strikeout>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:none;color:white;border:none;</string>
+        </property>
+        <property name="text">
+         <string>ARTIST LOADING ...</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="fm_aux_player_song_album_label">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>140</y>
+          <width>321</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+          <strikeout>false</strikeout>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:none;color:white;border:none;</string>
+        </property>
+        <property name="text">
+         <string>ALBUM LOADING ...</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="bt_song_next_btn_2">
+        <property name="geometry">
+         <rect>
+          <x>490</x>
+          <y>220</y>
+          <width>151</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="demo1.qrc">
+          <normaloff>:/logo/logos/forward_music_player.png</normaloff>:/logo/logos/forward_music_player.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>100</width>
+          <height>120</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="bt_play_pause_btn_2">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>220</y>
+          <width>171</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="demo1.qrc">
+          <normaloff>:/logo/logos/play_music_player.png</normaloff>:/logo/logos/play_music_player.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>100</width>
+          <height>120</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="bt_previous_btn_2">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>220</y>
+          <width>151</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="demo1.qrc">
+          <normaloff>:/logo/logos/backward__music_player.png</normaloff>:/logo/logos/backward__music_player.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>100</width>
+          <height>120</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="toolButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>101</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:white;border:2px solid white;border-radius:30px;</string>
+        </property>
+        <property name="text">
+         <string>...open</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="BT">
+       <attribute name="icon">
+        <iconset resource="demo1.qrc">
+         <normaloff>:/logo/logos/bt_tab.svg</normaloff>:/logo/logos/bt_tab.svg</iconset>
+       </attribute>
+       <attribute name="title">
+        <string/>
+       </attribute>
+       <widget class="QLabel" name="bt_player_song_title_label">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>60</y>
+          <width>371</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>24</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <strikeout>false</strikeout>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:none;color:white;border:none;</string>
+        </property>
+        <property name="text">
+         <string>TITLE LOADING...</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="bt_player_song_artist_label">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>110</y>
+          <width>321</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+          <strikeout>false</strikeout>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:none;color:white;border:none;</string>
+        </property>
+        <property name="text">
+         <string>ARTIST LOADING ...</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="bt_palyer_song_album_label">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>140</y>
+          <width>321</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+          <strikeout>false</strikeout>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:none;color:white;border:none;</string>
+        </property>
+        <property name="text">
+         <string>ALBUM LOADING ...</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="bt_song_next_btn">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>200</y>
+          <width>151</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="demo1.qrc">
+          <normaloff>:/logo/logos/forward_music_player.png</normaloff>:/logo/logos/forward_music_player.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>100</width>
+          <height>120</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="bt_play_pause_btn">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>200</y>
+          <width>171</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="demo1.qrc">
+          <normaloff>:/logo/logos/play_music_player.png</normaloff>:/logo/logos/play_music_player.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>100</width>
+          <height>120</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="bt_previous_btn">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>200</y>
+          <width>131</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>15</pointsize>
+          <weight>75</weight>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="demo1.qrc">
+          <normaloff>:/logo/logos/backward__music_player.png</normaloff>:/logo/logos/backward__music_player.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>100</width>
+          <height>120</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="camara_tab">
+     <attribute name="icon">
+      <iconset resource="demo1.qrc">
+       <normaloff>:/logo/logos/open_camara_tab.svg</normaloff>:/logo/logos/open_camara_tab.svg</iconset>
+     </attribute>
+     <attribute name="title">
+      <string/>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="calling_tab">
+     <attribute name="icon">
+      <iconset resource="demo1.qrc">
+       <normaloff>:/logo/logos/phone11.jpeg</normaloff>:/logo/logos/phone11.jpeg</iconset>
+     </attribute>
+     <attribute name="title">
+      <string/>
+     </attribute>
+     <widget class="QPushButton" name="person1_button_wakitaki">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>661</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>21</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:2px solid white;color:white;</string>
+      </property>
+      <property name="text">
+       <string>Manager</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="person2_button_2_wakitaki">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>110</y>
+        <width>661</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>21</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:2px solid white;color:white;</string>
+      </property>
+      <property name="text">
+       <string>Head Office Pune</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="person3_button_3_wakitaki">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>200</y>
+        <width>661</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>21</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:2px solid white;color:white;</string>
+      </property>
+      <property name="text">
+       <string>Head Office Mumbai</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="person4_button_4_wakitaki">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>290</y>
+        <width>661</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>21</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:2px solid white;color:white;</string>
+      </property>
+      <property name="text">
+       <string>Police</string>
+      </property>
+      <property name="icon">
+       <iconset resource="demo1.qrc">
+        <normaloff>:/logo/logos/police-badge_tab.svg</normaloff>:/logo/logos/police-badge_tab.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>60</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="person5_button_5_wakitaki">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>380</y>
+        <width>661</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>21</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:2px solid white;color:white;</string>
+      </property>
+      <property name="text">
+       <string>Ambulance</string>
+      </property>
+      <property name="icon">
+       <iconset resource="demo1.qrc">
+        <normaloff>:/logo/logos/ambulance_tab.svg</normaloff>:/logo/logos/ambulance_tab.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>60</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="setting_tab">
+     <attribute name="icon">
+      <iconset resource="demo1.qrc">
+       <normaloff>:/logo/logos/status_2_player.svg</normaloff>:/logo/logos/status_2_player.svg</iconset>
+     </attribute>
+     <attribute name="title">
+      <string/>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="stats_tab">
+     <attribute name="icon">
+      <iconset resource="demo1.qrc">
+       <normaloff>:/logo/logos/settings_player.svg</normaloff>:/logo/logos/settings_player.svg</iconset>
+     </attribute>
+     <attribute name="title">
+      <string/>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="demo1.qrc"/>
+ </resources>
+ <connections/>
+</ui>
